@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>강남 달토 | 강남 가라오케 추천</title>
+    <meta property="og:title" content="강남 달토 - 강남 가라오케 추천">
+    <meta property="og:description" content="강남 역삼동 삼정호텔에 위치한 달토(달리는토끼, 런닝래빗)는 10년 경력의 전문 매니저진과 쾌적한 시설로 운영되는 강남 대표 하이퍼블릭 가라오케입니다. 합리적인 가격과 맞춤형 서비스로 만족을 드립니다.">
+    <meta property="og:image" content="/img/a.jpg">
+    <meta name="naver-site-verification" content="1d5f82a5f068e723796cbc7f8ad6a1d5e1e034f8" />
+    <meta name="google-site-verification" content="nz2BZQbUrqpABNZ-rvDn8ifhaKFLPGKoYEq42ijs9bA" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Black+Han+Sans&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          font-family: "Noto Sans KR", sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6, a[href^="tel"] {
+          font-family: "Black Han Sans", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+        h1 {
+          @apply text-6xl mb-5;
+        }
+        h2 {
+          @apply text-5xl mb-5;
+        }
+        p {
+          @apply text-lg mb-2;
+        }
+        ul, dl {
+          @apply text-xl mb-2;
+        }
+        li, dt, dd {
+          @apply p-3
+        }
+        dd {
+          @apply pt-0
+        }
+      }
+      @layer components {
+        body {
+          @apply bg-black text-gray-100;
+        }
+        footer {
+          @apply fixed bottom-0 w-full py-10 text-center
+        }
+        section {
+          @apply overflow-hidden;
+        }
+        section:last-child {
+          @apply pb-60;
+        }
+        .container {
+          @apply mx-auto px-5 py-20 text-center;
+        }
+        h1, h2, a[href^="tel"] span:last-child strong {
+          @apply inline-block bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-600;
+        }
+        a[href^="tel"] {
+          @apply p-5 md:ps-7 text-3xl rounded-full text-black bg-gradient-to-r from-cyan-400 to-purple-600 shadow-xl/80;
+        }
+        a[href^="tel"] span:last-child {
+          @apply px-5 py-2 inline-block rounded-full bg-black;
+        }
+        a[href^="tel"] span:last-child strong {
+          font-weight: 400;
+        }
+
+        section:nth-child(n+2) {
+          @apply bg-black/90 backdrop-blur pt-20;
+        }
+        dd {
+          @apply text-lg text-gray-300 border-b-1 border-violet-600;
+        }
+      }
+      @layer utilities {
+        .aos-init {
+          opacity: 0;
+          transform: translateY(5rem);
+          transition: all .5s;
+        }
+        .aos-init.aos-animate {
+          opacity: 1;
+          transform: none;
+        }
+
+        .ul-type-a {
+          position: relative;
+          @apply text-shadow-lg/30;
+        }
+        .ul-type-a::before {
+          content: "";
+          display: block;
+          position: absolute;
+          z-index: -1;
+          left: 50%;
+          top: 50%;
+          width: 34rem;
+          height: 34rem;
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          opacity: .5;
+          @apply border border-slate-600 bg-gradient-to-r from-cyan-400 to-purple-600;
+        }
+        .ul-type-a ul {
+          font-weight: bold;
+        }
+        ul.ul-type-b {
+          @apply m-2 p-4 rounded-2xl border border-slate-600 bg-gray-800/50;
+        }
+        .ul-type-c {
+          @apply mx-auto max-w-3xl overflow-x-auto;
+        }
+        .ul-type-c li {
+          @apply m-2 p-8 max-w-full rounded-2xl border border-slate-600 bg-gray-800/50;
+        }
+        ul.ul-type-d {
+          @apply grid gap-3 grid-cols-2 md:grid-cols-3;
+        }
+        ul.ul-type-d li {
+          @apply flex justify-center items-center rounded-2xl border border-slate-600 bg-gray-800/50;
+        }
+        ul.ul-type-d li br {
+          @apply hidden md:block;
+        }
+
+        dl:has(input[type=checkbox]:first-child) {
+          text-align: left;
+        }
+        dt:has(input[type=checkbox]:first-child) {
+          position: relative;
+          margin-top: .75rem;
+          font-weight: bold;
+        }
+        dt:has(input[type=checkbox]:first-child)::before {
+          content: "";
+          display: block;
+          position: absolute;
+          right: .5rem;
+          margin-top: .5rem;
+          width: 1rem;
+          height: 1rem;
+          border-right: 2px solid;
+          border-bottom: 2px solid;
+          transform: rotate(-135deg);
+          transition: all .2s;
+        }
+        dt>input[type=checkbox]:first-child {
+          position: absolute;
+          inset: 0;
+          opacity: 0;
+          cursor: pointer;
+        }
+        dt:has(input[type=checkbox]:first-child)+dd {
+          padding-left: 2rem;
+          padding-right: 2rem;
+          height: auto;
+          transition: all .2s;
+        }
+        dt:has(input[type=checkbox]:first-child:not(:checked))::before {
+          transform: rotate(45deg);
+        }
+        dt:has(input[type=checkbox]:first-child:not(:checked))+dd {
+          height: 1px;
+          color: transparent;
+          user-select: none;
+        }
+
+        img {
+          display: inline-block;
+          margin: 0 auto;
+          width: 100%;
+          max-width: 512px;
+          @apply rounded-2xl;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main class="bg-cover bg-center bg-top bg-fixed bg-[url(/img/a.jpg)]">
+      <section>
+        <div class="container h-vh min-h-200 min-h-dvh flex justify-center items-center">
+          <div class="max-w-3xl p-20 pt-24 -m-20 bg-[size:100%_100%] bg-center bg-no-repeat bg-[url(/img/t.png)]">
+            <h1>강남 달토 <span class="hidden md:inline">|</span> <br class="md:hidden"> 강남 가라오케</h1>
+            <p>강남 역삼동 삼정호텔에 위치한 달토(달리는토끼, 런닝래빗)는 10년 경력의 전문 매니저진과 쾌적한 시설로 운영되는 강남 대표 하이퍼블릭 가라오케입니다. 합리적인 가격과 맞춤형 서비스로 만족을 드립니다.</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container" data-aos="fade">
+          <div class="mb-10 text-[0px]">
+            <img class="m-1" src="/img/b2.jpg" alt="">
+            <img class="m-1" src="/img/b4.jpg" alt="">
+            <img class="m-1" src="/img/b.jpg" alt="">
+            <img class="m-1" src="/img/b3.jpg" alt="">
+          </div>
+          <div class="max-w-3xl mx-auto">
+            <h2>강남 달토 소개</h2>
+            <p>강남 역삼동 삼정호텔에 위치한 달토(달리는토끼, 런닝래빗) 는 10년 넘게 운영되어 온 강남 대표 하이퍼블릭 가라오케 입니다. 넓고 쾌적한 룸, 세련된 인테리어, 그리고 10년 경력의 전문 매니저진이 모든 손님에게 맞춤형 서비스를 제공합니다.</p>
+            <p>맞춤 서비스라 하면, 손님들의 초이스 스타일 이상형 성격 손님들의 니즈에 맞춰 진행됩니다.</p>
+            <p>비즈니스 접대, 친구 모임, 회식 자리까지 어떤 자리이든 완벽히 어울리는 하이퍼블릭 룸입니다. 강남 달토는 처음 오신 분도 편하게 하나하나 시스템부터 설명드리며 강남룸을 즐길수 있는 분위기의 가라오케입니다.</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container" data-aos="fade">
+          <div class="max-w-3xl mx-auto">
+            <h2>강남 달토 시스템</h2>
+            <p>현재 강남 지역 대부분의 유흥 업소는 60분 단위 시스템으로 운영되고 있습니다.</p>
+            <p>강남 달토 가라오케 역시 T/C 기준 60분으로 진행되며, 연장 시에도 동일하게 60분 단위로 추가됩니다.</p>
+            <p>입장 시 담당 매니저가 직접 안내를 도와드리며, 룸에 착석하시면 물·음료·맥주 등 기본 세팅이 제공됩니다. 이후에는 룸 초이스(Choice) 형식으로 진행되며, 손님이 직접 선택하거나 매니저가 취향과 성향에 맞춰 추천해드립니다.</p>
+            <p>처음 방문하셔도 부담 없이 즐길 수 있도록 모든 과정은 투명하게 안내드리고 있습니다.</p>
+          </div>
+          <div class="mt-10 text-[0px]">
+            <img class="m-1" src="/img/c1.jpg" alt="">
+            <img class="m-1" src="/img/c2.jpg" alt="">
+            <img class="m-1" src="/img/c3.jpg" alt="">
+            <img class="m-1" src="/img/c4.jpg" alt="">
+            <img class="m-1" src="/img/c5.jpg" alt="">
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container" data-aos="fade">
+          <h2>강남 달토 가격</h2>
+          <p>달토(달리는토끼, 런닝래빗) 은 합리적인 가격 정책으로 운영됩니다. <br class="hidden md:block"> 주대, T/C, 지명비, 연장비 등 모든 요금이 명확하게 공개되어 있으며 숨겨진 추가 비용이 전혀 없습니다.</p>
+          <div class="my-10 lg:flex max-w-3xl mx-auto">
+            <div class="ul-type-a flex-2 lg:flex lg:flex-col lg:justify-center">
+              <ul>
+                <li>기본 룸차지(T/C): 60분 기준</li>
+                <li>연장: 동일 60분 단위</li>
+                <li>주류, 안주, 음료: 합리적 가격 구성</li>
+                <li>사전 예약 시 특별 할인 이벤트 진행 중</li>
+              </ul>
+              <p class="text-base">가격 관련 상세 안내는 예약 시 담당 매니저가 직접 설명드리며, <br class="hidden md:block"> 예산에 맞춰 맞춤형 패키지 구성도 가능합니다.</p>
+            </div>
+            <div class="flex-1 lg:flex lg:flex-col lg:justify-center whitespace-nowrap">
+              <ul class="ul-type-b">
+                <li>주대 180.000원</li>
+                <li>R/T 50.000원</li>
+                <li>T/C 130.000원</li>
+                <li>연장 T/C 150.000원 <br> (술추가 없을시 연장티+)</li>
+              </ul>
+              <ul class="ul-type-b">
+                <li>1인 360.000원</li>
+                <li>2인 490.000원</li>
+                <li>3인 620.000원</li>
+                <li>4인 750.000원</li>
+              </ul>
+            </div>
+          </div>
+          <p class="text-base">- 현금 결제 기준이며 카드결제시 +@ 될수 있습니다.</p>
+        </div>
+      </section>
+      <section>
+        <div class="container" data-aos="fade">
+          <h2>강남 달토 후기</h2>
+          <div class="ul-type-c">
+            <ul>
+              <li>✔️ “분위기 진짜 좋아요” 처음 가봤는데 룸도 넓고 음향도 좋았어요. 직원분들 서비스가 자연스럽고 친절해서 기분 좋게 놀다 왔습니다.</li>
+              <li>✔️ “회식 자리로 완벽해요” 회사 사람들과 방문했는데 초이스도 깔끔하고 매니저님이 센스 있게 챙겨주셨어요. 강남 가라오케 중에서는 달토가 제일 편하고 안정적이었어요.</li>
+              <li>✔️ “다음엔 또 올 거예요” 분위기, 가격, 서비스 다 만족. 역삼 삼정호텔 안이라 찾기도 쉽고 달리는토끼 런닝래빗 이름값 하네요!</li>
+              <li>친구 소개로 처음 갔는데 진짜 괜찮았어요. 룸이 깔끔하고 음악 음질도 좋아서 노래 부르기 딱이에요. 직원분들이 자연스럽게 분위기 맞춰줘서 어색하지 않았어요. 강남 달토 가라오케는 서비스가 확실히 다르네요. 또 갈 예정이에요.</li>
+              <li>요즘 강남 쪽 가라오케 몇 군데 가봤는데, 달토(달리는토끼) 만큼 편했던 곳은 없어요. 술도 깔끔하게 세팅되고 매니저분도 센스 있게 챙겨줘서 기분 좋게 마무리했어요. 다음엔 단골 될 것 같아요.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container" data-aos="fade">
+          <h2>강남 달토 질문사항 (FAQ)</h2>
+          <dl class="mx-auto max-w-2xl">
+            <dt><input type="checkbox">Q. 예약은 꼭 해야 하나요?</dt>
+            <dd>A. 네, 방문 전 전화나 카카오톡으로 예약하시면 대기 없이 바로 안내받으실 수 있습니다.</dd>
+            <dt><input type="checkbox">Q. 몇 시까지 운영하나요?</dt>
+            <dd>A. 강남 달토는 24시간 연중무휴로 운영됩니다. 새벽 시간에도 언제든 이용 가능합니다.</dd>
+            <dt><input type="checkbox">Q. 주차 가능한가요?</dt>
+            <dd>A. 네, 삼정호텔 내 전용 주차장 및 발렛파킹 서비스를 제공합니다.</dd>
+            <dt><input type="checkbox">Q. 처음 가는데 초이스가 어려워요.</dt>
+            <dd>A. 걱정하지 마세요. 담당 매니저가 손님의 취향을 파악해 분위기에 맞는 초이스를 자연스럽게 추천드립니다.</dd>
+            <dt><input type="checkbox">Q. 혼자서도 가능한가요?</dt>
+            <dd>A. 룸에 혼자 오신는분들이 절반에 가까울정도로 많습니다. 혼자서도 부담없이 1인룸 가격으로 확실한 서비스로 모시겠습니다.</dd>
+          </dl>
+          <div class="mt-10 flex flex-col lg:block">
+            <span class="m-3 px-5 py-2 rounded-full bg-purple-600 text-lg">
+            전화번호
+            010-2303-3778
+            </span>
+            <span class="m-3 px-5 py-2 rounded-full bg-purple-600 text-lg">
+            텔레그램
+            @hscompanyshs
+            </span>
+            <span class="m-3 px-5 py-2 rounded-full bg-purple-600 text-lg">
+            카카오톡
+            tlsgustlra
+            </span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container" data-aos="fade">
+          <h2>강남 달토 서비스</h2>
+          <div class="lg:grid lg:gap-3 lg:grid-cols-3">
+            <ul class="ul-type-d lg:col-span-2">
+              <li>언주역 도보 8분, <br> 삼정호텔 내 위치</li>
+              <li>500평 규모의 넓은 홀 <br> & 최신 음향시설</li>
+              <li>전문 매니저진 상주 <br> 20년 운영 노하우</li>
+              <li>비즈니스 접대 및 <br> 단체 모임 전문</li>
+              <li>합리적 가격과 투명한 <br> 요금 시스템</li>
+              <li>24시간 <br> 연중무휴 운영</li>
+              <li>무료 주차 및 <br> 발렛 지원</li>
+              <li>어느 지역이든 <br> 무료 픽업서비스</li>
+              <li>사전예약 시 <br> 특별 할인 혜택</li>
+            </ul>
+            <div class="mt-5 lg:mt-0 mb-2 rounded-2xl w-full min-h-100 bg-cover bg-center bg-[url(/img/m.png)]">
+            </div>
+          </div>
+          <p>강남 달토(달리는토끼, 런닝래빗)은 고객 한 분 한 분이 만족할 수 있도록 항상 정직하고 편안한 서비스를 제공합니다.</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a href="tel:+82-10-2303-3778"><span class="hidden md:inline-block">예약</span> <span><strong>신대표: 010-2303-3778</strong></span></a>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      document.addEventListener('dragstart', event => event.preventDefault());
+      document.addEventListener('selectstart', event => event.preventDefault());
+      document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+  </body>
+</html>
